@@ -1,0 +1,77 @@
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於羅高天文</title>
+    <style>
+        body {
+        background-image: url('S__63528962.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: sans-serif;
+        text-align: center;
+        color: #fff;
+        padding: 50px;
+        }
+        #message {
+        font-size: 24px;
+        margin-bottom: 20px;
+        }
+        button {
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin: 20px;
+        border: none;
+        background: #4c8caf;
+        color: white;
+        cursor: pointer;
+        }
+        button:hover {
+        background: #3b6e8c;
+        }
+
+    .bullet-list {
+    list-style: disc;          
+    padding-left: 1.2em;
+    display: inline-block;  /* 讓整個 <ul> 置中 */
+    margin: 0 auto; /* 置中整個列表 */
+    }
+    
+    </style>
+    </head>
+    <body>
+    <div id = "message">
+        <span style="font-size:30px;">\學弟妹加天文/</span><br>
+        （此為互動式頁面，可點選按鈕查看說明）
+    </div>
+
+    <script>
+    const homeText = `<span style="font-size:30px;">\\學弟妹加天文/</span><br>（此為互動式頁面，可點選按鈕查看說明）`;
+    function showText(text) {
+        document.getElementById("message").innerHTML = text;
+    }
+    function showHome() {
+        showText(homeText);
+    }
+    </script>
+
+
+    <div class="btn-container">
+        <button onclick="showHome()">首頁</button>
+        <button onclick="showText('本屆是第 38 屆天文社，在羅高的社團中可說是歷史悠久的社團。<br>在這裡，不只可以學到許多天文相關的課外知識，也可以實踐課本中的各種操作，甚至還能在夜晚觀星！<br>如果你有著想探究宇宙的好奇心，又苦於不會操作器材或沒有人與你同行嗎？那就加入天文社吧！')">關於我們</button>
+        <button onclick="showText(`慣例的活動會有望遠鏡操作教學、四季星空介紹及星象儀體驗。<br>學期末也會播放天文相關電影，緩解被期末考荼毒的心靈 (?)<br>本學期社課規劃如下：<br><ul class = 'bullet-list'><li>天文基礎理論介紹</li><li>秋冬星空介紹</li><li>望遠鏡操作教學</li><li>尋找小行星</li><li>問答競賽（有獎品！！）</li></ul><br>對於上述社課內容有疑問或興趣的歡迎直接詢問天文社幹部或私訊社帳！`)">活動介紹及社課規劃</button>
+        <button onclick="window.open('https://www.instagram.com/ldsh3_8ldac/?hl=zh-tw', '_blank')"> 社帳
+</button>
+
+    </div>
+
+    <script>
+        function showText(text) {
+        document.getElementById("message").innerHTML = text;
+        }
+    </script>
+    </body>
+    </html>
